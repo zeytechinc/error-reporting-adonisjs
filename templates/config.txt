@@ -1,0 +1,20 @@
+/*
+ * File: config.txt
+ * Created Date: Feb 25, 2022
+ * Copyright (c) 2022 Zeytech Inc. (https://zeytech.com)
+ * Author: Clint Pamperin (https://github.com/cpamp)
+ * -----
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+import { ErrorReportingConfig } from '@ioc:Adonis/Addons/Zeytech/ErrorReporting'
+
+const fileUploadsConfig: ErrorReportingConfig = {
+  /**
+   * Drivers to use in error reporting
+   */
+  drivers: [],
+}
+
+export default fileUploadsConfig

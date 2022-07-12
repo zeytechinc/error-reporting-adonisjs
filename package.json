@@ -1,0 +1,131 @@
+{
+  "name": "@zeytech/error-reporting-adonisjs",
+  "version": "1.0.0",
+  "description": "Configurable error reporting for Adonisjs applications.",
+  "main": "build/src/index.js",
+  "scripts": {
+    "pretest": "npm run lint",
+    "test": "node .bin/test.js",
+    "mrm": "mrm --preset=@adonisjs/mrm-preset",
+    "clean": "del build",
+    "compile": "npm run lint && npm run clean && tsc",
+    "build": "npm run compile && npm run copyfiles",
+    "prepublishOnly": "npm run build",
+    "lint": "eslint . --ext=.ts",
+    "format": "prettier --write .",
+    "commit": "git-cz",
+    "release": "np --message=\"chore(release): %s\"",
+    "version": "npm run build",
+    "sync-labels": "github-label-sync --labels ./node_modules/@adonisjs/mrm-preset/gh-labels.json zeytechinc/error-reporting-adonisjs",
+    "copyfiles": "copyfiles \"templates/**/*.txt\" \"instructions.md\" build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeytechinc/error-reporting-adonisjs.git"
+  },
+  "keywords": [
+    "adonisjs",
+    "zeytech",
+    "error",
+    "reporting"
+  ],
+  "author": "Zeytech Inc (https://zeytech.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zeytechinc/error-reporting-adonisjs/issues"
+  },
+  "homepage": "https://github.com/zeytechinc/error-reporting-adonisjs#readme",
+  "contributors": [
+    "Clint Pamperin (https://github.com/cpamp)"
+  ],
+  "mrmConfig": {
+    "core": false,
+    "license": "MIT",
+    "services": [],
+    "minNodeVersion": "16.13.1",
+    "probotApps": []
+  },
+  "devDependencies": {
+    "@adonisjs/core": "^5.4.2",
+    "@adonisjs/mrm-preset": "^5.0.2",
+    "@adonisjs/require-ts": "^2.0.10",
+    "@types/node": "^17.0.19",
+    "commitizen": "^4.2.4",
+    "copyfiles": "^2.4.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "del-cli": "^4.0.1",
+    "eslint": "^8.9.0",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-adonis": "^2.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "github-label-sync": "^2.0.2",
+    "husky": "^7.0.4",
+    "japa": "^4.0.0",
+    "mrm": "^3.0.10",
+    "np": "^7.6.0",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.5"
+  },
+  "files": [
+    "build/src",
+    "build/index.d.ts",
+    "build/index.js"
+  ],
+  "eslintConfig": {
+    "extends": [
+      "plugin:adonis/typescriptPackage",
+      "prettier"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "endOfLine": "auto"
+        }
+      ]
+    }
+  },
+  "eslintIgnore": [
+    "build"
+  ],
+  "prettier": {
+    "trailingComma": "es5",
+    "semi": false,
+    "singleQuote": true,
+    "useTabs": false,
+    "quoteProps": "consistent",
+    "bracketSpacing": true,
+    "arrowParens": "always",
+    "printWidth": 100
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "np": {
+    "contents": ".",
+    "anyBranch": false
+  },
+  "types": "build/adonis-typings/index.d.ts",
+  "typings": "build/adonis-typings/index.d.ts",
+  "adonisjs": {
+    "instructionsMd": "./build/instructions.md",
+    "types": "@zeytech/error-reporting-adonisjs",
+    "providers": [
+      "@zeytech/error-reporting-adonisjs/build/providers/errorReportingProvider"
+    ],
+    "templates": {
+      "basePath": "./build/templates",
+      "config": [
+        {
+          "src": "config.txt",
+          "dest": "zeytech-error-reporting"
+        }
+      ]
+    }
+  }
+}
