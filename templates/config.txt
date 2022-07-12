@@ -10,7 +10,7 @@
 
 import { ErrorReportingConfig } from '@ioc:Adonis/Addons/Zeytech/ErrorReporting'
 
-const fileUploadsConfig: ErrorReportingConfig = {
+const errorReportingConfig: ErrorReportingConfig = {
   /**
    * Drivers to use in error reporting
    */
@@ -22,4 +22,4 @@ const fileUploadsConfig: ErrorReportingConfig = {
   ],
 }
 
-export default fileUploadsConfig
+export default errorReportingConfig

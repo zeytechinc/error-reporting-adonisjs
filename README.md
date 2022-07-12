@@ -47,7 +47,7 @@ The config file contains an array of driver configurations.  Each configuration 
 ```typescript
 import { ErrorReportingConfig } from '@ioc:Adonis/Addons/Zeytech/ErrorReporting'
 
-const fileUploadsConfig: ErrorReportingConfig = {
+const errorReportingConfig: ErrorReportingConfig = {
   /**
    * Drivers to use in error reporting
    */
@@ -68,7 +68,7 @@ const fileUploadsConfig: ErrorReportingConfig = {
   ],
 }
 
-export default fileUploadsConfig
+export default errorReportingConfig
 ```
 
 The example above includes a coniguration for the built in logger driver as well as a fictitious file driver.
