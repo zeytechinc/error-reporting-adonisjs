@@ -1,6 +1,6 @@
 {
   "name": "@zeytech/error-reporting-adonisjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Configurable error reporting for Adonisjs applications.",
   "main": "build/providers/error-reporting-provider.js",
   "scripts": {
@@ -72,7 +72,9 @@
     "build/templates",
     "build/adonis-typings",
     "build/instructions.md",
-    "build/providers"
+    "build/providers",
+    "build/standalone.js",
+    "build/standalone.d.ts"
   ],
   "eslintConfig": {
     "extends": [
