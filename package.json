@@ -2,7 +2,7 @@
   "name": "@zeytech/error-reporting-adonisjs",
   "version": "1.0.0",
   "description": "Configurable error reporting for Adonisjs applications.",
-  "main": "build/src/index.js",
+  "main": "build/src/error-reporting-service.js",
   "scripts": {
     "pretest": "npm run lint",
     "test": "node .bin/test.js",
@@ -36,7 +36,8 @@
   },
   "homepage": "https://github.com/zeytechinc/error-reporting-adonisjs#readme",
   "contributors": [
-    "Clint Pamperin (https://github.com/cpamp)"
+    "Clint Pamperin (https://github.com/cpamp)",
+    "Steve Krenek (https://github.com/skrenek)"
   ],
   "mrmConfig": {
     "core": false,
@@ -67,9 +68,7 @@
     "typescript": "^4.5.5"
   },
   "files": [
-    "build/src",
-    "build/index.d.ts",
-    "build/index.js"
+    "build/src"
   ],
   "eslintConfig": {
     "extends": [
@@ -116,14 +115,14 @@
     "instructionsMd": "./build/instructions.md",
     "types": "@zeytech/error-reporting-adonisjs",
     "providers": [
-      "@zeytech/error-reporting-adonisjs/build/providers/errorReportingProvider"
+      "@zeytech/error-reporting-adonisjs/build/providers/error-reporting-provider"
     ],
     "templates": {
       "basePath": "./build/templates",
       "config": [
         {
           "src": "config.txt",
-          "dest": "zeytech-error-reporting"
+          "dest": "error-reporting"
         }
       ]
     }

@@ -12,7 +12,7 @@ export default class ExceptionHandler extends HttpExceptionHandler {
     super(Logger)
   }
 
-  report(error: any, ctx: HttpContextContract): void {
+  public report(error: any, ctx: HttpContextContract): void {
       super.report(error, ctx)
 
       this.errorReportingService.report(error, ctx)

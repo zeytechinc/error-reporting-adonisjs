@@ -14,7 +14,12 @@ const fileUploadsConfig: ErrorReportingConfig = {
   /**
    * Drivers to use in error reporting
    */
-  drivers: [],
+  drivers: [
+    // {
+    //    name: 'example',
+    //    options: {}
+    // }
+  ],
 }
 
 export default fileUploadsConfig
