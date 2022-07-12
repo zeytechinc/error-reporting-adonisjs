@@ -1,6 +1,6 @@
 {
   "name": "@zeytech/error-reporting-adonisjs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Configurable error reporting for Adonisjs applications.",
   "main": "build/providers/error-reporting-provider.js",
   "scripts": {
