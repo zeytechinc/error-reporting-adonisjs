@@ -2,7 +2,7 @@
   "name": "@zeytech/error-reporting-adonisjs",
   "version": "1.0.0",
   "description": "Configurable error reporting for Adonisjs applications.",
-  "main": "build/src/error-reporting-service.js",
+  "main": "build/providers/error-reporting-provider.js",
   "scripts": {
     "pretest": "npm run lint",
     "test": "node .bin/test.js",
@@ -68,7 +68,11 @@
     "typescript": "^4.5.5"
   },
   "files": [
-    "build/src"
+    "build/src",
+    "build/templates",
+    "build/adonis-typings",
+    "build/instructions.md",
+    "build/providers"
   ],
   "eslintConfig": {
     "extends": [
@@ -115,7 +119,7 @@
     "instructionsMd": "./build/instructions.md",
     "types": "@zeytech/error-reporting-adonisjs",
     "providers": [
-      "@zeytech/error-reporting-adonisjs/build/providers/error-reporting-provider"
+      "@zeytech/error-reporting-adonisjs"
     ],
     "templates": {
       "basePath": "./build/templates",
